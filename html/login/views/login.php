@@ -5,7 +5,7 @@
         <link rel="stylesheet" type="text/css" href="../public/style.css">
     </head>
     <body>
-        <form action="../controllers/authentication.php" method="post">
+        <form action="../controllers/auth.php" method="post">
             <h2>LOGIN</h2>
             <?php if (isset($_GET['error'])) { ?>
                 <p class="error"><?= $_GET['error']; ?></p>

@@ -5,6 +5,11 @@ require_once "../models/user.php";
 class AuthenticationController 
 {
 
+    public function __construct() 
+    {
+        $this->handleLoginRequest();
+    }
+
     public function authenticate($username, $password) 
     {
         $userModel = new \models\UserModel();
@@ -45,8 +50,5 @@ class AuthenticationController
         }
 
         $this->authenticate($username, $password);
-    }   
+    }
 }
-
-$authController = new AuthenticationController();
-$authController->handleLoginRequest();
