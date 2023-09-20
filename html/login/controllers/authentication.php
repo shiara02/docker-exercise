@@ -10,7 +10,6 @@ class AuthenticationController {
             header("Location: ../views/dashboard.php");
             exit();
         } else {
-            // Redirect to the login page with an error message
             header("Location: ../views/login.php?error=Incorrect Username or Password");
             exit();
         }
