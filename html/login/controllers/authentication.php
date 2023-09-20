@@ -1,9 +1,11 @@
 <?php
+namespace controllers;
+use Exception;
 require_once "../models/user.php";
 
 class AuthenticationController {
     public function authenticate($username, $password) {
-        $userModel = new UserModel();
+        $userModel = new \models\UserModel();
         $user = $userModel->authenticateUser($username, $password);
 
         if ($user) {

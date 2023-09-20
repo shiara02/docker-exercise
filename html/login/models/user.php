@@ -1,11 +1,12 @@
 <?php
+namespace models;
 require_once "../config/database.php";
 
 class UserModel {
     private $conn;
 
     public function __construct() {
-        $database = new Database();
+        $database = new \config\Database();
         $this->conn = $database->getConnection();
     }
 

@@ -1,4 +1,7 @@
 <?php
+namespace config;
+use mysqli;
+
 class Database {
     private $conn;
 
