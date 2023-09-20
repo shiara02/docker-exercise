@@ -18,10 +18,8 @@ class Database {
         $password = $envVariables['DB_PASSWORD'];
         $dbname = $envVariables['DB_DBNAME'];
 
-        // Initializes the db connection
         $this->conn = new mysqli($servername, $username, $password, $dbname);
 
-        // Check if the connection was successful
         if ($this->conn->connect_error) {
             die("Connection failed: " . $this->conn->connect_error);
         }
