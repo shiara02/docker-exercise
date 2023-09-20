@@ -27,7 +27,9 @@ class AuthenticationController {
 
                 if (empty($username)) {
                     throw new Exception("Username is required");
-                } elseif (empty($password)) {
+                } 
+                
+                if (empty($password)) {
                     throw new Exception("Password is required");
                 }
 
