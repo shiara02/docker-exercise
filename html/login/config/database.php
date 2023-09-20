@@ -2,11 +2,12 @@
 namespace config;
 use mysqli;
 
-class Database {
+class Database 
+{
     private $conn;
 
-    public function __construct() {
-        
+    public function __construct() 
+    {
         $envFile = '../.env';
 
         if (file_exists($envFile)) {
@@ -27,7 +28,8 @@ class Database {
         }
     }
 
-    public function getConnection() {
+    public function getConnection() 
+    {
         return $this->conn;
     }
 }

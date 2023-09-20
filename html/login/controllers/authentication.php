@@ -1,10 +1,12 @@
 <?php
 namespace controllers;
-use Exception;
 require_once "../models/user.php";
 
-class AuthenticationController {
-    public function authenticate($username, $password) {
+class AuthenticationController 
+{
+
+    public function authenticate($username, $password) 
+    {
         $userModel = new \models\UserModel();
         $user = $userModel->authenticateUser($username, $password);
 
@@ -16,9 +18,9 @@ class AuthenticationController {
             exit();
         }
     }
-
     
-    public function handleLoginRequest() {
+    public function handleLoginRequest() 
+    {
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
             header("Location: ../views/login.php");
             exit();
