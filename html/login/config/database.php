@@ -12,7 +12,6 @@ class Database {
         } else {
             die('.env file not found.');
         }
-        // Use environment variables for database connection
         $servername = $envVariables['DB_SERVERNAME'];
         $username = $envVariables['DB_USERNAME'];
         $password = $envVariables['DB_PASSWORD'];
